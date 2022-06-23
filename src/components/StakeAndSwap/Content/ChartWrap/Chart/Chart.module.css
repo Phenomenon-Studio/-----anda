@@ -1,0 +1,12 @@
+.wrap {
+    height: 375px;
+}
+
+@media (max-width: 991px) {
+    .wrap {
+        padding: 0 15px 15px;
+        margin: 0 -15px;
+        background-color: var(--color-black-500);
+        border-radius: 0 0 23px 23px;
+    }
+}

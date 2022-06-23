@@ -1,0 +1,151 @@
+.wrap {
+    margin-top: 30px;
+}
+
+.btn {
+    --position-x: max(calc(var(--first-value-offset-x) * -1), calc(var(--second-value-offset-x) * -1));
+
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 0;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+.btn + .btn {
+    margin-top: 10px;
+}
+
+.btn::before,
+.btn::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: max(var(--first-value-offset-x), var(--second-value-offset-x));
+    height: 100%;
+    background-color: var(--color-black-500);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.btn::before {
+    left: var(--position-x);
+}
+
+.btn::after {
+    right: var(--position-x);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn.active .label {
+    color: var(--color-primary);
+}
+
+.btn.active,
+.btn:hover,
+.btn:focus,
+.btn:focus-visible {
+    background-color: var(--color-black-500);
+}
+
+.btn.active::before,
+.btn.active::after,
+.btn:hover::before,
+.btn:hover::after,
+.btn:focus::before,
+.btn:focus-visible::before,
+.btn:focus::after,
+.btn:focus-visible::after,
+.btn.active .decor::before,
+.btn.active .decor::after {
+    opacity: 1;
+}
+
+.box {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.decor {
+    position: relative;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: var(--color-black-300);
+}
+
+.decor::before,
+.decor::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.decor::before {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: var(--gradient-input-border-primary);
+}
+
+.decor::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-black-500);
+}
+
+.titleWrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-gray-300);
+}
+
+.title {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.time {
+    font-size: 13px;
+}
+
+.label {
+    font-size: 13px;
+    line-height: 1.2em;
+    color: var(--color-gray-300);
+    transition: color 0.2s;
+}
+
+@media (max-width: 991px) {
+    .btn::before,
+    .btn::after {
+        width: var(--offset-x);
+    }
+
+    .btn::before {
+        left: calc(var(--offset-x) * -1);
+    }
+
+    .btn::after {
+        right: calc(var(--offset-x) * -1);
+    }
+}

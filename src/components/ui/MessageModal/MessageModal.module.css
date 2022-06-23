@@ -1,0 +1,42 @@
+.wrap {
+    position: fixed;
+    z-index: var(--max-z-index);
+    top: 115px;
+    right: 15px;
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--color-black-300);
+    border-radius: 23px;
+    padding: 20px;
+}
+
+.btnClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnClose svg {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1199px) {
+    .wrap {
+        top: 85px;
+    }
+}
+
+@media (max-width: 574px) {
+    .wrap {
+        width: auto;
+        max-width: none;
+        left: 15px;
+    }
+}

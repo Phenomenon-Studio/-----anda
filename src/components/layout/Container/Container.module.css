@@ -1,0 +1,14 @@
+.container {
+    max-width: calc(var(--container-width) + (var(--container-half-padding) * 2));
+    width: 100%;
+    padding: 0 var(--container-half-padding);
+    margin: 0 auto;
+}
+
+.mini {
+    max-width: calc(1000px + (var(--container-half-padding) * 2));
+}
+
+.full {
+    max-width: 100%;
+}

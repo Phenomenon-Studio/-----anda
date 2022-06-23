@@ -1,0 +1,170 @@
+.btn {
+    --btn-border-radius: 10em;
+
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-primary);
+    font-size: 10px;
+    border-radius: var(--btn-border-radius);
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:disabled {
+    background-color: var(--gradient-secondary);
+    cursor: not-allowed;
+}
+
+.btn.bordered:disabled {
+    background-color: var(--color-black-400);
+    cursor: not-allowed;
+}
+
+.btn.bordered:disabled > span {
+    opacity: 0.15;
+}
+
+.btn:disabled::before {
+    display: none;
+}
+
+.btn:disabled span {
+    opacity: 0.15;
+}
+
+.btn svg {
+    flex-shrink: 0;
+    width: 2em;
+    height: 2em;
+    margin-right: 1em;
+}
+
+.medium {
+    padding: 2.4em 4em;
+}
+
+.medium > span {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.mini {
+    padding: 1.2em 2em;
+}
+
+.mini > span {
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.primary {
+    background: var(--gradient-primary-hover);
+}
+
+.primary::before {
+    background: var(--gradient-primary);
+}
+
+.primary:hover::before,
+.primary:focus::before,
+.primary:focus-visible::before {
+    opacity: 0;
+}
+
+.secondary {
+    background: var(--gradient-secondary);
+}
+
+.secondary::before {
+    background: var(--gradient-secondary-hover);
+    opacity: 0;
+}
+
+.secondary:hover::before,
+.secondary:focus::before,
+.secondary:focus-visible::before {
+    opacity: 1;
+}
+
+.primary:hover:not(.btn:disabled),
+.secondary:hover:not(.btn:disabled),
+.primary:focus:not(.btn:disabled),
+.secondary:focus-visible:not(.btn:disabled) {
+    box-shadow: var(--shadow-primary);
+}
+
+.primary::before,
+.secondary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: var(--btn-border-radius);
+    transition: opacity 0.2s;
+}
+
+.full {
+    width: 100%;
+}
+
+.bordered {
+    border: 1px solid var(--color-black-100);
+}
+
+.connected,
+.bordered-gradient {
+    border: 1px solid transparent;
+    z-index: auto;
+}
+
+.bordered-gradient {
+    background-color: var(--color-black-500);
+}
+
+.connected {
+    padding: 0.8em 1.2em 0.8em 2em;
+    background-color: var(--color-black-300);
+}
+
+.connected > span {
+    border-radius: 1em;
+    padding: 0.25em 0.6em;
+    background-color: var(--color-black-400);
+}
+
+.bordered:hover:not(.btn:disabled),
+.connected:hover:not(.btn:disabled),
+.bordered-gradient:hover:not(.btn:disabled),
+.bordered:focus:not(.btn:disabled),
+.bordered:focus-visible:not(.btn:disabled),
+.connected:focus:not(.btn:disabled),
+.connected:focus-visible:not(.btn:disabled),
+.bordered-gradient:focus:not(.btn:disabled),
+.bordered-gradient:focus-visible:not(.btn:disabled) {
+    background-color: var(--color-black-200);
+}
+
+.connected::after,
+.bordered-gradient::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: var(--btn-border-radius);
+    background: var(--gradient-input-border-primary);
+}

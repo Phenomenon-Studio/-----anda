@@ -1,0 +1,151 @@
+.wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-black-400);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menuTransition {
+    transition: opacity 0.3s;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.inner {
+    height: 100%;
+    padding: 1.5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.head {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5em;
+    margin-bottom: 2em;
+}
+
+.btnClose {
+    position: relative;
+    width: 4.5em;
+    height: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnClose::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-info);
+    opacity: 0.3;
+    filter: blur(35px);
+}
+
+.btnClose svg {
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.menuWrap {
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+.menu {
+    --margins: min(6em, 4vw);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.lang {
+    margin-right: var(--margins);
+}
+
+.buttons {
+    margin-left: var(--margins);
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 15px;
+}
+
+.buttonsBg {
+    background-color: var(--color-black-400);
+}
+
+.hamburger {
+    margin-left: 15px;
+}
+
+@media (max-width: 1499px) {
+    .menu {
+        --margins: min(30px, 3vw);
+    }
+
+    .lang {
+        margin-right: 0;
+    }
+
+    .buttons,
+    .hamburger {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 1em;
+    }
+
+    .buttons {
+        margin-bottom: 1.5em;
+        margin-left: 0;
+        padding: 0 1.5em;
+        order: -1;
+    }
+
+    .bottomBtn {
+        order: 1;
+    }
+
+    .lang {
+        margin-top: 1.5em;
+        margin-right: 0;
+        padding: 0 1.5em;
+        order: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .buttons {
+        grid-template-columns: max-content max-content;
+    }
+}
+
+@media (max-width: 574px) {
+    .buttons {
+        margin: 1.5em auto 0;
+        width: 100%;
+        max-width: 320px;
+        grid-template-columns: 1fr;
+    }
+}

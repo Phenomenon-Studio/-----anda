@@ -1,0 +1,8 @@
+.wrap {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--color-gray-300);
+}

@@ -1,0 +1,25 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: var(--color-black-300);
+    border-radius: 23px;
+    padding: 24px;
+}
+
+.wrap svg {
+    width: 28px;
+    height: 28px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+@media (max-width: 374px) {
+    .wrap {
+        padding: 15px;
+    }
+}

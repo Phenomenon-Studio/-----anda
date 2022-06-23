@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn,
+.input {
+    width: 50%;
+}
+
+.btn {
+    background-color: var(--color-black-400);
+}

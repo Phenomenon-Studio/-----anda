@@ -1,0 +1,63 @@
+.wrap {
+    position: relative;
+    width: 4.5em;
+    height: 4.5em;
+    border-radius: 50%;
+    background: var(--gradient-primary-hover);
+    box-shadow: var(--shadow-primary);
+}
+
+.wrap span,
+.wrap::before,
+.wrap::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 0.2em;
+    background-color: var(--color-primary);
+    border-radius: 0.1em;
+    transition: opacity 0.2s 0.1s;
+}
+
+.wrap span {
+    transform: translate(-50%, -50%);
+    width: 2.2em;
+}
+
+.wrap::before,
+.wrap::after {
+    content: "";
+    width: 1.4em;
+    margin-top: -0.1em;
+}
+
+.wrap::before {
+    transform: translate(-50%, -0.6em);
+}
+
+.wrap::after {
+    transform: translate(-50%, 0.6em);
+}
+
+.wrap svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 1.8em;
+    width: 1.8em;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.wrap.active svg {
+    opacity: 1;
+    transition: opacity 0.2s 0.1s;
+}
+
+.wrap.active span,
+.wrap.active::before,
+.wrap.active::after {
+    opacity: 0;
+    transition: opacity 0.2s;
+}

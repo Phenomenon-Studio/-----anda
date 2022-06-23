@@ -1,0 +1,52 @@
+.wrap {
+    width: 50%;
+    background-color: var(--color-black-300);
+    border-radius: 23px;
+    padding: 12px 24px;
+}
+
+.label {
+    font-size: 13px;
+    line-height: 1.2em;
+    color: var(--color-gray-300);
+}
+
+.value {
+    margin: 10px 0;
+    font-size: 17px;
+    line-height: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.subValue {
+    font-size: 15px;
+    line-height: 1em;
+    color: var(--color-gray-300);
+}
+
+@media (max-width: 1050px) {
+    .wrap {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .wrap {
+        width: 50%;
+    }
+}
+
+@media (max-width: 479px) {
+    .wrap {
+        width: 100%;
+    }
+}
+
+@media (max-width: 374px) {
+    .wrap {
+        padding: 12px 15px;
+    }
+}

@@ -1,0 +1,76 @@
+.wrap {
+    --active-line-height: 2px;
+
+    font-size: 10px;
+    overflow: auto;
+    padding-bottom: var(--active-line-height);
+    margin: 0 calc(var(--container-half-padding) * -1);
+}
+
+.inner {
+    padding-left: var(--container-half-padding);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.item {
+    white-space: nowrap;
+    position: relative;
+}
+
+.button {
+    position: relative;
+    padding: 1.2em 2.4em;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button span {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--color-gray-200);
+    transition: color 0.2s;
+}
+
+.underline {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: var(--active-line-height);
+    background-color: var(--color-primary);
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(88, 85, 177, 0.6) 0%,
+        rgba(37, 34, 134, 0.528) 40.1%,
+        rgba(26, 24, 96, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.button:focus::after,
+.button:focus-visible::after,
+.button:hover::after,
+.button.selected::after {
+    opacity: 1;
+}
+
+.button:focus span,
+.button:focus-visible span,
+.button:hover span,
+.button.selected span {
+    color: var(--color-primary);
+}

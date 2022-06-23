@@ -1,0 +1,34 @@
+.title {
+    font-weight: 700;
+    letter-spacing: 0.87px;
+    line-height: 1em;
+}
+
+.primary {
+    position: relative;
+    font-size: 54px;
+    padding-bottom: 30px;
+}
+
+.primary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #5b3cb4 0%, #623cb4 100%);
+    border-radius: 4px;
+}
+
+.secondary {
+    font-size: 38px;
+}
+
+@media (max-width: 767px) {
+    .primary,
+    .secondary {
+        font-size: 36px;
+    }
+}

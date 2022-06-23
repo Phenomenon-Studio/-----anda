@@ -1,0 +1,50 @@
+.wrap {
+    margin-bottom: 20px;
+}
+
+.payloadWrap {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1em;
+}
+
+.date {
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--color-gray-300);
+}
+
+.coins {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-gray-300);
+}
+
+.buttons {
+    padding-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .payloadWrap {
+        margin-top: 20px;
+    }
+
+    .price {
+        font-size: 38px;
+    }
+
+    .buttons {
+        border-radius: 23px 23px 0 0;
+        padding: 10px 15px 0;
+        margin: 0 -15px;
+        background-color: var(--color-black-500);
+    }
+}

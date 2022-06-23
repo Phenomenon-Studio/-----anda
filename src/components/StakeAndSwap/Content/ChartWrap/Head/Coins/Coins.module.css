@@ -1,0 +1,22 @@
+.wrap {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.box svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.separator {
+    margin: 0 10px;
+}

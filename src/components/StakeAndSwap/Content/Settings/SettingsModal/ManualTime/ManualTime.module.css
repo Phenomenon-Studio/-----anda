@@ -1,0 +1,17 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input,
+.label {
+    width: 50%;
+}
+
+.label {
+    font-size: 13px;
+    line-height: 1.2em;
+    color: var(--color-gray-300);
+}

@@ -1,0 +1,47 @@
+.wrap {
+    display: flex;
+    position: relative;
+}
+
+.box {
+    position: relative;
+    width: 40%;
+    max-width: 500px;
+    padding: 50px min(35px, 3vw);
+    background-color: var(--color-black-400);
+}
+
+.dashboardWrap .box {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+}
+
+.loader {
+    width: 100%;
+    height: 450px;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .wrap {
+        background-color: var(--color-black-400);
+        justify-content: center;
+    }
+
+    .box {
+        width: 100%;
+        padding: 20px 15px 50px;
+    }
+
+    .dashboardWrap .box {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboardWrap,
+    .dashboardWrap .box {
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "presets": [
+        [
+            "next/babel",
+            {
+                "targets": [">0.3%", "not dead", "not op_mini all", "not ie <= 11"],
+                "useBuiltIns": "usage",
+                "corejs": 3
+            }
+        ]
+    ],
+    "plugins": []
+}

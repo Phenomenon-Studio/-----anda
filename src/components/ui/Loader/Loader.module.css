@@ -1,0 +1,91 @@
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.wrap {
+    font-size: 10px;
+    display: flex;
+}
+
+.wrap.center {
+    justify-content: center;
+}
+
+.wrap.right {
+    justify-content: flex-end;
+}
+
+.inner {
+    display: inline-block;
+    width: 9.5em;
+    height: 9.5em;
+    position: relative;
+}
+
+.inner div {
+    position: absolute;
+    border-radius: 50%;
+    width: 1.7em;
+    height: 1.7em;
+    background: var(--gradient-input-border-primary);
+    opacity: 0.3;
+    animation: fade 1.2s linear infinite;
+}
+
+.inner div:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 0s;
+}
+
+.inner div:nth-child(2) {
+    top: 1.2em;
+    right: 1.2em;
+    animation-delay: 0.15s;
+}
+
+.inner div:nth-child(3) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    animation-delay: 0.3s;
+}
+
+.inner div:nth-child(4) {
+    bottom: 1.2em;
+    right: 1.2em;
+    animation-delay: 0.45s;
+}
+
+.inner div:nth-child(5) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 0.6s;
+}
+
+.inner div:nth-child(6) {
+    bottom: 1.2em;
+    left: 1.2em;
+    animation-delay: 0.75s;
+}
+
+.inner div:nth-child(7) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation-delay: 0.9s;
+}
+
+.inner div:nth-child(8) {
+    top: 1.2em;
+    left: 1.2em;
+    animation-delay: 1.05s;
+}

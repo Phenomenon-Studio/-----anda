@@ -1,0 +1,64 @@
+.wrap {
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+}
+
+.wrap::before,
+.wrap::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wrap::before {
+    left: 80px;
+    width: 370px;
+    height: 85px;
+    background-image: url("/images/stars-stake1.webp");
+    animation: var(--animation-blink) 2s 0.5s linear alternate infinite;
+}
+
+.wrap::after {
+    right: 75px;
+    width: 225px;
+    height: 50px;
+    background-image: url("/images/stars-stake2.webp");
+    animation: var(--animation-blink) 2s 1.5s linear alternate infinite;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+    .wrap {
+        padding-top: 60px;
+    }
+
+    .wrap::before,
+    .wrap::after {
+        display: none;
+    }
+
+    .box {
+        margin-top: 50px;
+    }
+
+    .content {
+        padding-top: 50px;
+    }
+}
+
+@media (min-resolution: 192dpi) {
+    .wrap::before {
+        background-image: url("/images/stars-stake1@2x.webp");
+    }
+
+    .wrap::after {
+        background-image: url("/images/stars-stake2@2x.webp");
+    }
+}

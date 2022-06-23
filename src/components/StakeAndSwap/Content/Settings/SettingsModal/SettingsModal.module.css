@@ -1,0 +1,51 @@
+.wrap {
+    --first-value-offset-x: 35px;
+    --second-value-offset-x: 3vw;
+
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px min(var(--first-value-offset-x), var(--second-value-offset-x));
+    background-color: var(--color-black-400);
+}
+
+.btn {
+    margin-bottom: 15px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-black-500);
+}
+
+.btn svg {
+    fill: var(--color-gray-300);
+    width: 15px;
+    height: 10px;
+    margin-right: 3px;
+    transform: rotate(-90deg);
+    transition: fill 0.2s;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus svg,
+.btn:focus-visible svg,
+.btn:hover svg {
+    fill: var(--color-primary);
+}
+
+@media (max-width: 991px) {
+    .wrap {
+        --offset-x: 15px;
+
+        padding: 20px var(--offset-x) 50px;
+    }
+}

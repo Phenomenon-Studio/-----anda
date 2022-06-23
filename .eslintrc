@@ -1,0 +1,59 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2021
+    },
+    "ignorePatterns": ["node_modules/", ".next/"],
+    "extends": ["eslint:recommended", "next", "plugin:react/recommended", "plugin:react-hooks/recommended", "prettier"],
+    "rules": {
+        "@next/next/no-document-import-in-page": ["off"],
+        "@next/next/no-img-element": ["off"],
+        "react/react-in-jsx-scope": ["off"],
+        "max-len": [
+            "error",
+            {
+                "code": 120,
+                "ignoreUrls": true,
+                "ignoreRegExpLiterals": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-loop-func": ["error"],
+        "comma-style": ["error", "last"],
+        "space-before-blocks": ["error", "always"],
+        "no-mixed-spaces-and-tabs": ["error"],
+        "no-unused-vars": ["error"],
+        "no-extra-semi": ["error"],
+        "no-console": ["warn"],
+        "no-debugger": ["warn"],
+        "block-spacing": ["error", "always"],
+        "max-nested-callbacks": [
+            "error",
+            {
+                "max": 7
+            }
+        ],
+        "no-trailing-spaces": ["error"],
+        "semi-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "no-var": ["error"],
+        "indent": ["error", 4, { "SwitchCase": 1, "offsetTernaryExpressions": true }],
+        "no-multi-spaces": ["error"],
+        "no-control-regex": ["off"]
+    },
+    "globals": {
+        "ethereum": true
+    }
+}

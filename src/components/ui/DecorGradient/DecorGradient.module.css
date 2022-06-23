@@ -1,0 +1,71 @@
+.wrap {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+}
+
+.primary {
+    left: 0;
+}
+
+.secondary {
+    right: 0;
+}
+
+.primary::before,
+.secondary::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: var(--gradient-bg-width);
+    height: 100%;
+}
+
+.primary::before {
+    left: -25%;
+    background: var(--gradient-bg-primary);
+}
+
+.secondary::after {
+    right: -25%;
+    background: var(--gradient-bg-secondary);
+}
+
+.medium,
+.mini,
+.large {
+    width: 100%;
+}
+
+.medium {
+    height: var(--gradient-bg-medium-height);
+}
+
+.mini {
+    height: var(--gradient-bg-small-height);
+}
+
+.large {
+    height: var(--gradient-bg-large-height);
+}
+
+@media (max-width: 767px) {
+    .primary::before {
+        left: -65%;
+    }
+
+    .secondary::after {
+        right: -65%;
+    }
+}
+
+@media (max-width: 479px) {
+    .primary::before {
+        left: -110%;
+    }
+
+    .secondary::after {
+        right: -110%;
+    }
+}

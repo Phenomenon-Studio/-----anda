@@ -1,0 +1,33 @@
+.backdrop {
+    z-index: var(--max-z-index);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.backdrop::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(5, 2, 15, 0.9);
+    backdrop-filter: blur(20px);
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.wrap {
+    padding: 15px;
+    margin: auto;
+}

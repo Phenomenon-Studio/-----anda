@@ -1,0 +1,117 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.select {
+    z-index: 10;
+    font-size: 13px;
+    font-weight: 400;
+    width: 70px;
+    color: var(--color-primary);
+}
+
+.select:global(.css-b62m3t-container .css-1s2u09g-control),
+.select:global(.css-b62m3t-container .css-1pahdxg-control) {
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    min-height: 42px;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.select:global(.css-b62m3t-container .css-mohuvp-dummyInput-DummyInput) {
+    outline: none;
+}
+
+.select:global(.css-b62m3t-container .css-1okebmr-indicatorSeparator) {
+    display: none;
+}
+
+.select:global(.css-b62m3t-container .css-319lph-ValueContainer),
+.select:global(.css-b62m3t-container .css-1d8n9bt) {
+    padding: 0;
+}
+
+.select:global(.css-b62m3t-container .css-qc6sy-singleValue) {
+    text-align: center;
+    margin: 0;
+    color: var(--color-primary);
+}
+
+.select:global(.css-b62m3t-container .css-tlfecz-indicatorContainer),
+.select:global(.css-b62m3t-container .css-1gtu0rj-indicatorContainer) {
+    padding: 0;
+    color: var(--color-primary);
+}
+
+.select:global(.css-b62m3t-container .css-26l3qy-menu) {
+    background-color: var(--color-black-400);
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    animation: fade-in 0.2s;
+}
+
+.select:global(.css-b62m3t-container .menu-close) {
+    animation: fade-out 0.2s;
+}
+
+.select:global(.css-b62m3t-container .css-4ljt47-MenuList) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.select:global(.css-b62m3t-container .css-4ljt47-MenuList > div),
+.select:global(.css-b62m3t-container .css-11unzgr > div) {
+    padding: 10px 12px;
+}
+
+.select:global(.css-b62m3t-container .css-9gakcf-option) {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+}
+
+.select:global(.css-b62m3t-container .css-1n7v3ny-option) {
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--color-gray-100);
+    background-color: var(--color-black-400);
+    transition: color 0.2s;
+}
+
+.select:global(.css-b62m3t-container .css-yt9ioa-option) {
+    transition: color 0.2s;
+    border-radius: 4px;
+}
+
+.select:global(.css-b62m3t-container div[class$="indicatorContainer"] > svg) {
+    transition: transform 0.2s;
+}
+
+.select:global(.css-b62m3t-container div[class$="indicatorContainer"] > svg.opened) {
+    transform: rotate(180deg);
+}

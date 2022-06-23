@@ -1,0 +1,12 @@
+.buttons {
+    padding-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    .buttons {
+        border-radius: 23px 23px 0 0;
+        padding: 10px 15px 0;
+        margin: 0 -15px;
+        background-color: var(--color-black-500);
+    }
+}

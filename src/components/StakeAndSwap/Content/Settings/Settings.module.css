@@ -1,0 +1,82 @@
+.wrap {
+    margin-top: 2em;
+    font-size: 10px;
+    border-radius: 2.3em;
+    background-color: var(--color-black-300);
+    padding: 1.5em 2.4em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 0.5em;
+}
+
+.headerText {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    color: var(--color-gray-100);
+}
+
+.btn {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.4em;
+    height: 4.4em;
+    border-radius: 50%;
+    background-color: var(--color-black-500);
+}
+
+.btn svg {
+    fill: var(--color-gray-300);
+    width: 2.2em;
+    height: 2.2em;
+    transition: fill 0.2s;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus svg,
+.btn:focus-visible svg,
+.btn:hover svg {
+    fill: var(--color-primary);
+}
+
+.list {
+    margin-top: 1.5em;
+}
+
+.list li + li {
+    margin-top: 0.5em;
+}
+
+.list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.itemLabel {
+    font-size: 1.3em;
+    color: var(--color-gray-300);
+}
+
+.itemValue {
+    font-size: 1.7em;
+    line-height: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+@media (max-width: 374px) {
+    .wrap {
+        padding: 1.5em;
+    }
+}
